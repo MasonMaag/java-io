@@ -4,8 +4,8 @@ public class Ram {
     private String brand;
     private String name;
     private String type;
-    private Integer speed;
-    private Integer modules;
+    private String speed;
+    private String modules;
     private String capacity;
     private String price;
 
@@ -13,8 +13,8 @@ public class Ram {
         this.brand = values[0];
         this.name = values[1];
         this.type = values[2];
-        this.speed = Integer.parseInt(values[3]);
-        this.modules = Integer.parseInt(values[4]);
+        this.speed = values[3];
+        this.modules = values[4];
         this.capacity = values[5];
         this.price = values[6];
     }
@@ -43,19 +43,19 @@ public class Ram {
         this.type = type;
     }
 
-    public Integer getSpeed() {
+    public String getSpeed() {
         return speed;
     }
 
-    public void setSpeed(Integer speed) {
+    public void setSpeed(String speed) {
         this.speed = speed;
     }
 
-    public Integer getModules() {
+    public String getModules() {
         return modules;
     }
 
-    public void setModules(Integer modules) {
+    public void setModules(String modules) {
         this.modules = modules;
     }
 

@@ -1,6 +1,24 @@
 package com.devmountain;
 
+/*
+Instructions: Cheat Sheet to  help remember what Objects had which constructors.
+--------------------------------------------------------------------------------
+Ram = String[]
+
+Storage = List<String>
+
+Gpu = No Arg/Setter
+Motherboard = No Arg/Setter
+Psu = No Arg/Setter
+
+Case = All Arg
+Cpu = All Arg
+CpuCooler = All Arg
+ */
+
+
 import com.devmountain.objects.*;
+
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -24,14 +42,13 @@ public class Main {
 //        openFileAndPrint(cases);
 
 //        seedCases(cases);
-        System.out.println(seedCases(cases));
-//        System.out.println(seedCpus(cpus));
-//        System.out.println(seedCpuCoolers(cpuCoolers));
-//        System.out.println(seedGpus(gpus));
-//        System.out.println(seedMotherboards(motherboards));
-//        System.out.println(seedPsus(psus));
-//        System.out.println(seedRam(ram));
-//        System.out.println(seedStorage(storage));
+//        seedCpus(cpus);
+//        seedCpuCoolers(cpuCoolers);
+//        seedGpus(gpus);
+//        seedMotherboards(motherboards);
+//        seedPsus(psus);
+//        seedRam(ram);
+        seedStorage(storage);
     }
 
     //Simple open and print to console
@@ -92,6 +109,7 @@ public class Main {
 
             Cpu cpu = new Cpu(brand, level, name, cores, threads, coreClock,
                     boostClock, watts, intGraphics, socket, price);
+            System.out.println(cpu);
             cpuList.add(cpu);
         }
         return cpuList;
@@ -112,7 +130,9 @@ public class Main {
             String price = values[4];
 
             CpuCooler cooler = new CpuCooler(brand, name, type, radiator, price);
+            System.out.println(cooler);
             coolerList.add(cooler);
+
         }
         return coolerList;
     }
@@ -135,7 +155,7 @@ public class Main {
             gpu.setCoreClock(values[4]);
             gpu.setBoostClock(values[5]);
             gpu.setPrice(values[6]);
-
+            System.out.println(gpu);
             gpuList.add(gpu);
         }
         return gpuList;
@@ -154,9 +174,10 @@ public class Main {
             motherboard.setBrand(values[0]);
             motherboard.setName(values[1]);
             motherboard.setSocket(values[2]);
-            motherboard.setRamSlots(Integer.parseInt(values[3]));
+            motherboard.setRamSlots(values[3]);
             motherboard.setPrice(values[4]);
 
+            System.out.println(motherboard);
             motherboardList.add(motherboard);
         }
         return motherboardList;
@@ -180,6 +201,7 @@ public class Main {
             psu.setModular(values[5]);
             psu.setPrice(values[6]);
 
+            System.out.println(psu);
             psuList.add(psu);
         }
         return psuList;
@@ -196,6 +218,7 @@ public class Main {
             String[] values = line.split(",");
 
             Ram ram = new Ram(values);
+            System.out.println(ram);
             ramList.add(ram);
         }
         return ramList;
@@ -211,6 +234,7 @@ public class Main {
             List<String> values = List.of(line.split(","));
 
             Storage storage = new Storage(values);
+            System.out.println(storage);
             storageList.add(storage);
         }
         return storageList;

@@ -4,7 +4,7 @@ public class Motherboard {
     private String brand;
     private String name;
     private String socket;
-    private Integer ramSlots;
+    private String ramSlots;
     private String price;
 
     public String getBrand() {
@@ -31,11 +31,11 @@ public class Motherboard {
         this.socket = socket;
     }
 
-    public Integer getRamSlots() {
+    public String getRamSlots() {
         return ramSlots;
     }
 
-    public void setRamSlots(Integer ramSlots) {
+    public void setRamSlots(String ramSlots) {
         this.ramSlots = ramSlots;
     }
 
